@@ -67,16 +67,17 @@
       height: 100%;
       pointer-events: none;
     }
-
+    
     .header {
-      height: 100vh;
+      min-height: 100vh; /* Allows the header to grow if content exceeds viewport */
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center; /* Center content vertically */
       align-items: center;
       text-align: center;
       position: relative;
-      padding: 20px 0; /* Optional: Adjust padding as needed */
+      overflow: hidden; /* Hide any overflow */
+      padding: 0; /* Remove default padding */
     }
 
     .header-content {
