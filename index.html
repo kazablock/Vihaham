@@ -79,12 +79,17 @@
       padding: 20px 0; /* Optional: Adjust padding as needed */
     }
 
+    /*.header-content {*/
+    /*  flex-grow: 1;*/
+    /*  display: flex;*/
+    /*  flex-direction: column;*/
+    /*  justify-content: center;*/
+    /*  align-items: center;*/
+    /*}*/
+
     .header-content {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      max-height: 80vh; /* Ensure content doesn't exceed 80% of the viewport height */
+      overflow: auto;   /* Allow scrolling if content overflows */
     }
 
     h1 {
