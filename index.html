@@ -291,6 +291,12 @@
     .audio-control i {
       font-size: 24px;
     }
+    .autoplay-note {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 1rem;
+      font-style: italic;
+    }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -392,6 +398,7 @@
       <p class="quote">"As we start our new life together, we thank you for being a part of our story."</p>
       <p>With love,</p>
       <p>Vishnu & Haritha</p>
+      <p class="autoplay-note">Music autoplay may be blocked by your browser. Click the sound icon to enable if needed.</p>
     </footer>
   </div>
 </div>
@@ -491,7 +498,7 @@
   let isPlaying = true;
 
   // Set initial volume to 50%
-  backgroundMusic.volume = 0.5;
+  backgroundMusic.volume = 0.6;
   backgroundMusic.play();
 
   audioControl.addEventListener('click', () => {
@@ -508,8 +515,5 @@
   // Add this line to ensure the correct icon is displayed on page load
   audioControl.innerHTML = '<i class="fas fa-volume-up"></i>';
 </script>
-<p style="position: fixed; bottom: 10px; left: 10px; font-size: 12px; color: rgba(255,255,255,0.5);">
-  Note: Autoplay may be blocked by your browser. Click the sound icon to enable music if it doesn't start automatically.
-</p>
 </body>
 </html>
