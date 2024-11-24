@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vishnu & Haritha - A Celestial Union</title>
   <!-- Fonts and Icons -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&display=swap">
@@ -10,468 +9,462 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&display=swap');
-  h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 5rem;
-    margin-bottom: 1rem;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInUp 1.5s forwards;
-    }
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    }
-
-  body, html {
-    height: 100%;
-    font-family: 'Cormorant Garamond', serif;
-    background: #000;
-    color: #fff;
-    overflow-x: hidden;
-    }
-
-  .parallax {
-    perspective: 1px;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    }
-
-  .parallax__layer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    }
-
-  .parallax__layer--base {
-    transform: translateZ(0);
-    position: relative;
-    z-index: 1;
-    }
-
-  .parallax__layer--back {
-    transform: translateZ(-1px) scale(2);
-    }
-
-  .stars {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    }
-
-  .header {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    }
-
-  h1 {
-    font-size: 5rem;
-    margin-bottom: 1rem;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInUp 1.5s forwards;
-    }
-
-  .subtitle {
-    font-size: 1.5rem;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInUp 1.5s 0.5s forwards;
-    }
-
-  @keyframes fadeInUp {
-        to {
-          opacity: 1;
-          transform: translateY(0);
-          }
-      }
-
-  .content {
-    position: relative;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    }
-
-  .section {
-    margin-bottom: 4rem;
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 1s, transform 1s;
-    }
-
-  .section.visible {
-    opacity: 1;
-    transform: translateY(0);
-    }
-
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    }
-
-  p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    }
-
-  .timeline {
-    position: relative;
-    padding: 2rem 0;
-    }
-
-  .timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 2px;
-    height: 100%;
-    background: #fff;
-    transform: translateX(-50%);
-    }
-
-  .event {
-    position: relative;
-    margin-bottom: 2rem;
-    width: 50%;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    opacity: 0;
-    transition: opacity 1s, transform 1s;
-    }
-
-  .event.left {
-    left: 0;
-    transform: translateX(-100%);
-    }
-
-  .event.right {
-    left: 50%;
-    transform: translateX(100%);
-    }
-
-  .event.visible {
-    opacity: 1;
-    transform: translateX(0);
-    }
-
-  .event::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 20px;
-    height: 20px;
-    background: #fff;
-    border-radius: 50%;
-    }
-
-  .event.left::after {
-    right: -60px;
-    }
-
-  .event.right::after {
-    left: -60px;
-    }
-
-  .rsvp {
-    text-align: center;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    }
-
-  .btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: #000;
-    background: #fff;
-    border-radius: 50px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-  .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
-    }
-
-  .quote {
-    font-style: italic;
-    text-align: center;
-    font-size: 1.5rem;
-    margin: 2rem 0;
-    }
-
-  .parents {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    }
-
-  @media (max-width: 768px) {
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&display=swap');
     h1 {
-      font-size: 3rem;
-      }
+      font-family: 'Great Vibes', cursive;
+      font-size: 5rem;
+      margin-bottom: 1rem;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 1.5s forwards;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Cormorant Garamond', serif;
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .parallax {
+      perspective: 1px;
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .parallax__layer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .parallax__layer--base {
+      transform: translateZ(0);
+      position: relative;
+      z-index: 1;
+    }
+
+    .parallax__layer--back {
+      transform: translateZ(-1px) scale(2);
+    }
+
+    .stars, .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 5rem;
+      margin-bottom: 1rem;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 1.5s forwards;
+    }
 
     .subtitle {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 1.5s 0.5s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .section {
+      margin-bottom: 4rem;
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 1s, transform 1s;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .timeline {
+      position: relative;
+      padding: 2rem 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background: #fff;
+      transform: translateX(-50%);
+    }
 
     .event {
-      width: 100%;
+      position: relative;
+      margin-bottom: 2rem;
+      width: 50%;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      opacity: 0;
+      transition: opacity 1s, transform 1s;
+    }
+
+    .event.left {
       left: 0;
-      transform: translateX(0) !important;
-      }
+      transform: translateX(-100%);
+    }
 
     .event.right {
-      left: 0;
-      }
+      left: 50%;
+      transform: translateX(100%);
+    }
 
-    .timeline::before,
+    .event.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
     .event::after {
-      display: none;
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border-radius: 50%;
+    }
+
+    .event.left::after {
+      right: -60px;
+    }
+
+    .event.right::after {
+      left: -60px;
+    }
+
+    .rsvp {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: #000;
+      background: #fff;
+      border-radius: 50px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .quote {
+      font-style: italic;
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .parents {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 3rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+      }
+
+      .event {
+        width: 100%;
+        left: 0;
+        transform: translateX(0) !important;
+      }
+
+      .event.right {
+        left: 0;
+      }
+
+      .timeline::before,
+      .event::after {
+        display: none;
       }
     }
 
-  .map-link {
-    color: #fff;
-    text-decoration: none;
-    border-bottom: 1px dotted #fff;
-    transition: border-bottom-color 0.3s, color 0.3s;
-    display: inline-flex;
-    align-items: center;
-    margin-right: 15px;
+    .map-link {
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 1px dotted #fff;
+      transition: border-bottom-color 0.3s, color 0.3s;
+      display: inline-flex;
+      align-items: center;
+      margin-right: 15px;
     }
 
-  .map-link:hover {
-    border-bottom-color: transparent;
-    color: #f0f0f0;
+    .map-link:hover {
+      border-bottom-color: transparent;
+      color: #f0f0f0;
     }
 
-  .map-link i {
-    margin-right: 5px;
-    font-size: 1.2em;
+    .map-link i {
+      margin-right: 5px;
+      font-size: 1.2em;
     }
 
-  .tba {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    padding: 1rem;
-    text-align: center;
-    margin-top: 1rem;
+    .tba {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 1rem;
     }
 
-  .audio-control {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    z-index: 1000;
+    .audio-control {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      z-index: 1000;
     }
 
-  .audio-control:hover {
-    background: rgba(255, 255, 255, 0.2);
+    .audio-control:hover {
+      background: rgba(255, 255, 255, 0.2);
     }
 
-  .audio-control i {
-    font-size: 24px;
+    .audio-control i {
+      font-size: 24px;
     }
 
-  .autoplay-note {
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.5);
-    margin-top: 1rem;
-    font-style: italic;
+    .autoplay-note {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 1rem;
+      font-style: italic;
     }
 
-  /* Added CSS for the infinity symbol */
-  .infinity-symbol {
-    margin-top: 1rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    /* Added CSS for the infinity symbol */
+    .infinity-symbol {
+      margin-top: 1rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-  /* Scroll Indicator Styles */
-  .scroll-indicator {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-decoration: none;
-    text-align: center;
-    cursor: pointer;
-    animation: bounce 2s infinite;
+    /* Scroll Indicator Styles */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      animation: bounce 2s infinite;
     }
 
-  .scroll-indicator svg {
-    width: 30px;
-    height: 30px;
-    fill: rgba(255, 255, 255, 0.7);
+    .scroll-indicator svg {
+      width: 30px;
+      height: 30px;
+      fill: rgba(255, 255, 255, 0.7);
     }
 
-  @keyframes bounce {
+    @keyframes bounce {
       0%, 20%, 50%, 80%, 100% {
-    transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+      }
+      40% {
+        transform: translate(-50%, -10px);
+      }
+      60% {
+        transform: translate(-50%, -5px);
+      }
     }
-  40% {
-    transform: translate(-50%, -10px);
-    }
-  60% {
-    transform: translate(-50%, -5px);
-    }
-  }
   </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 <div class="parallax">
   <div class="parallax__layer parallax__layer--back">
-  <canvas class="stars" id="stars"></canvas>
+    <canvas class="stars" id="stars"></canvas>
+    <!-- Hearts Canvas -->
+    <canvas class="hearts" id="hearts"></canvas>
   </div>
   <div class="parallax__layer parallax__layer--base">
-  <header class="header">
-  <h1>Vishnu & Haritha</h1>
-  <p class="subtitle">A Celestial Union</p>
-  <!-- Infinity Symbol SVG -->
-  <svg class="infinity-symbol" width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-  <!-- Define the glow filter -->
-  <filter id="glow">
-  <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-  <feMerge>
-  <feMergeNode in="coloredBlur"/>
-  <feMergeNode in="SourceGraphic"/>
-  </feMerge>
-  </filter>
-  <!-- Define the shimmer gradient -->
-  <linearGradient id="shimmer-gradient" x1="0" y1="0" x2="200" y2="0" gradientUnits="userSpaceOnUse">
-  <stop offset="0%" stop-color="rgba(255,255,255,0.2)" />
-  <stop offset="50%" stop-color="white" />
-  <stop offset="100%" stop-color="rgba(255,255,255,0.2)" />
-  <animateTransform attributeName="gradientTransform" type="translate" from="-200 0" to="200 0" dur="3s" repeatCount="indefinite" />
-  </linearGradient>
-  </defs>
-  <!-- Infinity path with progressive drawing and shimmer effect -->
-  <path id="infinite-path" d="M20,50 C20,20 80,20 100,50 C120,80 180,80 180,50
-C180,20 120,20 100,50 C80,80 20,80 20,50"
-                stroke="url(#shimmer-gradient)" stroke-width="2" fill="none" filter="url(#glow)"
-                stroke-dasharray="400" stroke-dashoffset="400">
-  <!-- Animate the progressive drawing -->
-  <animate attributeName="stroke-dashoffset" from="400" to="0" dur="5s" fill="freeze" />
-  </path>
-  </svg>
-  <!-- Scroll Indicator -->
-  <a href="#invitation" class="scroll-indicator">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-  <path d="M207.029 381.476L12.686 187.314C-4.229 170.399-4.229 142.117 12.686 125.202L34.515 103.373C51.43 86.458 79.712 86.458 96.627 103.373L224 230.745L351.373 103.373C368.288 86.458 396.57 86.458 413.485 103.373L435.314 125.202C452.229 142.117 452.229 170.399 435.314 187.314L240.971 381.476C228.01 394.438 211.99 394.438 199.029 381.476H207.029z"/>
-  </svg>
-  </a>
-  </header>
-  <main class="content">
-  <section class="section" id="invitation">
-  <h2>With joyful hearts, we invite you to our wedding celebration</h2>
-  <p class="quote">"Two souls with a single thought, two hearts that beat as one."</p>
-  <div class="parents">
-  <h3>Majeti Haritha</h3>
-  <p>daughter of Majeti Sreenivas & Padmasree</p>
-  <p>to</p>
-  <h3>Kaza Naga Sai Vishnu</h3>
-  <p>son of Kaza Adinarayana & Lakshmi Srujana</p>
-  </div>
-  </section>
-  <!-- Other sections remain unchanged -->
-  <section class="section" id="details">
-  <h2>Wedding Celebrations</h2>
-  <div class="timeline">
-  <div class="event left">
-  <h3>Engagement Ceremony</h3>
-  <p>December 8, 2024 at 10:30 AM</p>
-  <p>Kinara Grand, Hyderabad</p>
-  </div>
-  <div class="event right">
-  <h3>Mehendi Night</h3>
-  <div class="tba">
-  <p>Date and Location To Be Announced</p>
-  <p>We're still finalizing the perfect venue for our special day. Stay tuned for updates!</p>
-  </div>
-  </div>
-  <div class="event left">
-  <h3>Wedding Ceremony</h3>
-  <div class="tba">
-  <p>Date and Location To Be Announced</p>
-  <p>We're still finalizing the perfect venue for our special day. Stay tuned for updates!</p>
-  </div>
-  </div>
-  <div class="event right">
-  <h3>Reception</h3>
-  <div class="tba">
-  <p>Date and Location To Be Announced</p>
-  <p>We can't wait to celebrate with you! Details coming soon.</p>
-  </div>
-  </div>
-  </div>
-  </section>
-  <section class="section" id="engagement">
-  <h2>Engagement Ceremony</h2>
-  <p>Date: December 8th, 2024</p>
-  <p>Time: 10:00 AM</p>
-  <p>Venue: Kinara Grand</p>
-  <p>
-  <a href="https://maps.app.goo.gl/27kaE7S6of1esJKc7" target="_blank" rel="noopener noreferrer" class="map-link">
-  <i class="fa-solid fa-location-dot"></i> Google Maps
-  </a>
-  |
-  <a href="https://maps.apple.com/?address=2-70/1,2,%20Mumbai%20Highway,%20Chanda%20Nagar,%20Hyderabad,%20500050,%20Telangana,%20India&auid=18401697468772328488&ll=17.495403,78.326611&lsp=9902&q=Swagath%20Residency&t=m" target="_blank" rel="noopener noreferrer" class="map-link">
-  <i class="fa-solid fa-location-dot"></i> Apple Maps
-  </a>
-  </p>
-  <p>Join us as we celebrate the beginning of our journey together with the blessing of our families and friends.</p>
-  </section>
-
-  <section class="section" id="wedding">
-  <h2>Wedding Ceremony</h2>
-  <div class="tba">
-  <p>Date and Location To Be Announced</p>
-  <p>We're still finalizing the perfect venue for our special day. Stay tuned for updates!</p>
-  </div>
-  </section>
-  </main>
-  <footer>
-  <p class="quote">"As we start our new life together, we thank you for being a part of our story."</p>
-  <p>With love,</p>
-  <p>Vishnu & Haritha</p>
-  <p class="autoplay-note">Music autoplay may be blocked by your browser. Click the sound icon to enable if needed.</p>
-  </footer>
+    <header class="header">
+      <h1>Vishnu & Haritha</h1>
+      <p class="subtitle">A Celestial Union</p>
+      <!-- Infinity Symbol SVG with color-changing effect -->
+      <svg class="infinity-symbol" width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <!-- Define the glow filter -->
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <!-- Infinity path with progressive drawing and color-changing effect -->
+        <path id="infinite-path" d="M20,50 C20,20 80,20 100,50 C120,80 180,80 180,50
+    C180,20 120,20 100,50 C80,80 20,80 20,50"
+              stroke="#FFD700" stroke-width="4" fill="none" filter="url(#glow)"
+              stroke-dasharray="400" stroke-dashoffset="400">
+          <!-- Animate the progressive drawing -->
+          <animate attributeName="stroke-dashoffset" from="400" to="0" dur="5s" fill="freeze" />
+          <!-- Animate the stroke color -->
+          <animate attributeName="stroke" values="#FFD700;#C0C0C0;#E5E4E2;#AAA9AD;#FFD700" dur="10s" repeatCount="indefinite"/>
+        </path>
+      </svg>
+      <!-- Scroll Indicator -->
+      <a href="#invitation" class="scroll-indicator">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path d="M207.029 381.476L12.686 187.314C-4.229 170.399-4.229 142.117 12.686 125.202L34.515 103.373C51.43 86.458 79.712 86.458 96.627 103.373L224 230.745L351.373 103.373C368.288 86.458 396.57 86.458 413.485 103.373L435.314 125.202C452.229 142.117 452.229 170.399 435.314 187.314L240.971 381.476C228.01 394.438 211.99 394.438 199.029 381.476H207.029z"/>
+        </svg>
+      </a>
+    </header>
+    <main class="content">
+      <section class="section" id="invitation">
+        <h2>With joyful hearts, we invite you to our wedding celebration</h2>
+        <p class="quote">"Two souls with a single thought, two hearts that beat as one."</p>
+        <div class="parents">
+          <h3>Majeti Haritha</h3>
+          <p>daughter of Majeti Sreenivas & Padmasree</p>
+          <p>to</p>
+          <h3>Kaza Naga Sai Vishnu</h3>
+          <p>son of Kaza Adinarayana & Lakshmi Srujana</p>
+        </div>
+      </section>
+      <section class="section" id="details">
+        <h2>Wedding Celebrations</h2>
+        <div class="timeline">
+          <div class="event left">
+            <h3>Engagement Ceremony</h3>
+            <p>December 8, 2024 at 10:30 AM</p>
+            <p>Kinara Grand, Hyderabad</p>
+          </div>
+          <div class="event right">
+            <h3>Mehendi Night</h3>
+            <div class="tba">
+              <p>Date and Location To Be Announced</p>
+              <p>We're still finalizing the perfect venue for our special day. Stay tuned for updates!</p>
+            </div>
+          </div>
+          <div class="event left">
+            <h3>Wedding Ceremony</h3>
+            <div class="tba">
+              <p>Date and Location To Be Announced</p>
+              <p>We're still finalizing the perfect venue for our special day. Stay tuned for updates!</p>
+            </div>
+          </div>
+          <div class="event right">
+            <h3>Reception</h3>
+            <div class="tba">
+              <p>Date and Location To Be Announced</p>
+              <p>We can't wait to celebrate with you! Details coming soon.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="engagement">
+        <h2>Engagement Ceremony</h2>
+        <p>Date: December 8th, 2024</p>
+        <p>Time: 10:00 AM</p>
+        <p>Venue: Kinara Grand</p>
+        <p>
+          <a href="https://maps.app.goo.gl/27kaE7S6of1esJKc7" target="_blank" rel="noopener noreferrer" class="map-link">
+            <i class="fa-solid fa-location-dot"></i> Google Maps
+          </a>
+          |
+          <a href="https://maps.apple.com/?address=2-70/1,2,%20Mumbai%20Highway,%20Chanda%20Nagar,%20Hyderabad,%20500050,%20Telangana,%20India&auid=18401697468772328488&ll=17.495403,78.326611&lsp=9902&q=Swagath%20Residency&t=m" target="_blank" rel="noopener noreferrer" class="map-link">
+            <i class="fa-solid fa-location-dot"></i> Apple Maps
+          </a>
+        </p>
+        <p>Join us as we celebrate the beginning of our journey together with the blessing of our families and friends.</p>
+      </section>
+      <section class="section" id="wedding">
+        <h2>Wedding Ceremony</h2>
+        <div class="tba">
+          <p>Date and Location To Be Announced</p>
+          <p>We're still finalizing the perfect venue for our special day. Stay tuned for updates!</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p class="quote">"As we start our new life together, we thank you for being a part of our story."</p>
+      <p>With love,</p>
+      <p>Vishnu & Haritha</p>
+      <p class="autoplay-note">Music autoplay may be blocked by your browser. Click the sound icon to enable if needed.</p>
+    </footer>
   </div>
 </div>
 <div class="audio-control" id="audioControl">
@@ -489,7 +482,7 @@ C180,20 120,20 100,50 C80,80 20,80 20,50"
     parallax.style.transform = 'translateZ(-1px) scale(2) translateY(' + scrollPosition * -0.5 + 'px)';
   });
 
-  // Starry background with larger star shapes
+  // Starry background
   const canvas = document.getElementById('stars');
   const ctx = canvas.getContext('2d');
   let width, height;
@@ -551,13 +544,108 @@ C180,20 120,20 100,50 C80,80 20,80 20,50"
     stars.push(new Star(x, y, radius, speed, points, innerRadius));
   }
 
-  function animate() {
-    requestAnimationFrame(animate);
+  function animateStars() {
+    requestAnimationFrame(animateStars);
     ctx.clearRect(0, 0, width, height);
     stars.forEach(star => star.update());
   }
 
-  animate();
+  animateStars();
+
+  // Heart background
+  const heartsCanvas = document.getElementById('hearts');
+  const heartsCtx = heartsCanvas.getContext('2d');
+
+  function resizeHeartsCanvas() {
+    heartsCanvas.width = window.innerWidth;
+    heartsCanvas.height = window.innerHeight;
+  }
+
+  resizeHeartsCanvas();
+  window.addEventListener('resize', resizeHeartsCanvas);
+
+  function Heart() {
+    this.x = Math.random() * heartsCanvas.width;
+    this.y = Math.random() * heartsCanvas.height;
+    this.size = Math.random() * 30 + 10;
+    this.opacity = 0;
+    this.maxOpacity = Math.random() * 0.5 + 0.5;
+    this.fadeSpeed = Math.random() * 0.005 + 0.0025; // Adjusted values for slower fade
+    this.color = `hsla(${Math.random() * 360}, 70%, 70%, ${this.opacity})`;
+    this.fadingOut = false;
+    this.holdTime = 60; // Hold at max opacity for ~1 second
+    this.holdCounter = 0;
+  }
+
+  Heart.prototype.draw = function() {
+    heartsCtx.save();
+    heartsCtx.translate(this.x, this.y);
+    heartsCtx.scale(this.size / 50, this.size / 50);
+    heartsCtx.beginPath();
+    heartsCtx.moveTo(25, 15);
+    heartsCtx.bezierCurveTo(25, 15, 20, 0, 0, 0);
+    heartsCtx.bezierCurveTo(-30, 0, -30, 37.5, -30, 37.5);
+    heartsCtx.bezierCurveTo(-30, 55, -10, 77, 25, 95);
+    heartsCtx.bezierCurveTo(60, 77, 80, 55, 80, 37.5);
+    heartsCtx.bezierCurveTo(80, 37.5, 80, 0, 50, 0);
+    heartsCtx.bezierCurveTo(35, 0, 25, 15, 25, 15);
+    heartsCtx.closePath();
+    heartsCtx.globalAlpha = this.opacity;
+    heartsCtx.fillStyle = this.color;
+    heartsCtx.fill();
+    heartsCtx.restore();
+  }
+
+  Heart.prototype.update = function() {
+    if (!this.fadingOut) {
+      // Fade in
+      if (this.opacity < this.maxOpacity) {
+        this.opacity += this.fadeSpeed;
+        if (this.opacity >= this.maxOpacity) {
+          this.opacity = this.maxOpacity;
+        }
+      } else {
+        // Hold at max opacity
+        this.holdCounter++;
+        if (this.holdCounter >= this.holdTime) {
+          this.fadingOut = true;
+        }
+      }
+    } else {
+      // Fade out
+      this.opacity -= this.fadeSpeed;
+      if (this.opacity <= 0) {
+        this.reset();
+      }
+    }
+    this.color = `hsla(${Math.random() * 360}, 70%, 70%, ${this.opacity})`;
+    this.draw();
+  }
+
+  Heart.prototype.reset = function() {
+    this.x = Math.random() * heartsCanvas.width;
+    this.y = Math.random() * heartsCanvas.height;
+    this.size = Math.random() * 30 + 10;
+    this.opacity = 0;
+    this.maxOpacity = Math.random() * 0.5 + 0.5;
+    this.fadeSpeed = Math.random() * 0.005 + 0.0025; // Adjusted values for slower fade
+    this.fadingOut = false;
+    this.holdCounter = 0;
+    this.color = `hsla(${Math.random() * 360}, 70%, 70%, ${this.opacity})`;
+  }
+
+  const hearts = [];
+  for (let i = 0; i < 5; i++) {
+    hearts.push(new Heart());
+  }
+
+  function animateHearts() {
+    requestAnimationFrame(animateHearts);
+    heartsCtx.clearRect(0, 0, heartsCanvas.width, heartsCanvas.height);
+    hearts.forEach(heart => heart.update());
+  }
+
+  animateHearts();
 
   // Scroll animations
   const observer = new IntersectionObserver((entries) => {
@@ -599,7 +687,7 @@ C180,20 120,20 100,50 C80,80 20,80 20,50"
     isPlaying = !isPlaying;
   });
 
-  // Add this line to ensure the correct icon is displayed on page load
+  // Ensure the correct icon is displayed on page load
   audioControl.innerHTML = '<i class="fas fa-volume-up"></i>';
 </script>
 </body>
