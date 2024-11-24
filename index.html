@@ -466,18 +466,28 @@
         // Background music control
         const audioControl = document.getElementById('audioControl');
         const backgroundMusic = document.getElementById('backgroundMusic');
-        let isPlaying = false;
+        let isPlaying = true;
+
+        // Set initial volume to 50%
+        backgroundMusic.volume = 0.5;
+        backgroundMusic.play();
 
         audioControl.addEventListener('click', () => {
-            if (isPlaying) {
-                backgroundMusic.pause();
-                audioControl.innerHTML = '<i class="fas fa-volume-mute"></i>';
-            } else {
-                backgroundMusic.play();
-                audioControl.innerHTML = '<i class="fas fa-volume-up"></i>';
-            }
-            isPlaying = !isPlaying;
+          if (isPlaying) {
+            backgroundMusic.pause();
+            audioControl.innerHTML = '<i class="fas fa-volume-mute"></i>';
+          } else {
+            backgroundMusic.play();
+            audioControl.innerHTML = '<i class="fas fa-volume-up"></i>';
+          }
+          isPlaying = !isPlaying;
         });
+
+        // Add this line to ensure the correct icon is displayed on page load
+        audioControl.innerHTML = '<i class="fas fa-volume-up"></i>';
     </script>
+<!--    <p style="position: fixed; bottom: 10px; left: 10px; font-size: 12px; color: rgba(255,255,255,0.5);">-->
+<!--      Note: Autoplay may be blocked by your browser. Click the sound icon to enable music if it doesn't start automatically.-->
+<!--    </p>-->
 </body>
 </html>
