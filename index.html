@@ -72,10 +72,19 @@
       height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       text-align: center;
       position: relative;
+      padding: 20px 0; /* Optional: Adjust padding as needed */
+    }
+
+    .header-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     h1 {
@@ -361,8 +370,9 @@
   </div>
   <div class="parallax__layer parallax__layer--base">
     <header class="header">
-      <h1>Vishnu & Haritha</h1>
-      <p class="subtitle">A Celestial Union</p>
+      <div class="header-content">
+        <h1>Vishnu & Haritha</h1>
+        <p class="subtitle">A Celestial Union</p>
       <!-- Infinity Symbol SVG with color-changing effect -->
       <svg class="infinity-symbol" width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -392,6 +402,7 @@
           <path d="M207.029 381.476L12.686 187.314C-4.229 170.399-4.229 142.117 12.686 125.202L34.515 103.373C51.43 86.458 79.712 86.458 96.627 103.373L224 230.745L351.373 103.373C368.288 86.458 396.57 86.458 413.485 103.373L435.314 125.202C452.229 142.117 452.229 170.399 435.314 187.314L240.971 381.476C228.01 394.438 211.99 394.438 199.029 381.476H207.029z"/>
         </svg>
       </a>
+      </div>
     </header>
     <main class="content">
       <section class="section" id="invitation">
