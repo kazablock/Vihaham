@@ -244,6 +244,9 @@
         font-size: 3rem;
       }
 
+      .scroll-indicator i {
+        font-size: 2rem;
+      }
       .subtitle {
         font-size: 1.2rem;
       }
@@ -253,11 +256,6 @@
         width: 150px;
         height: 75px;
       }
-
-      /* Ensure scroll indicator stays visible */
-      /*.scroll-indicator {*/
-      /*  bottom: 10px; !* Adjust as needed *!*/
-      /*}*/
 
       .event {
         width: 100%;
@@ -319,6 +317,35 @@
       z-index: 1000;
     }
 
+    /* Scroll Indicator Styles */
+    .scroll-indicator {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .scroll-indicator i {
+      font-size: 2.5rem;
+      color: #FFD700; /* Gold color matching the infinity symbol */
+      animation: arrowBounce 2s infinite;
+    }
+
+    /* Animation for the arrow */
+    @keyframes arrowBounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+
+
     .audio-control:hover {
       background: rgba(255, 255, 255, 0.2);
     }
@@ -340,24 +367,6 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-    }
-
-    /* Scroll Indicator Styles */
-    .scroll-indicator {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      text-decoration: none;
-      text-align: center;
-      cursor: pointer;
-      animation: bounce 2s infinite;
-    }
-
-    .scroll-indicator svg {
-      width: 25px;
-      height: 25px;
-      fill: rgba(255, 255, 255, 0.7);
     }
 
     @keyframes bounce {
@@ -409,12 +418,9 @@
         </path>
       </svg>
       </div>
-      <!-- Scroll Indicator -->
-      <a href="#invitation" class="scroll-indicator">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <path d="M207.029 381.476L12.686 187.314C-4.229 170.399-4.229 142.117 12.686 125.202L34.515 103.373C51.43 86.458 79.712 86.458 96.627 103.373L224 230.745L351.373 103.373C368.288 86.458 396.57 86.458 413.485 103.373L435.314 125.202C452.229 142.117 452.229 170.399 435.314 187.314L240.971 381.476C228.01 394.438 211.99 394.438 199.029 381.476H207.029z"/>
-        </svg>
-      </a>
+      <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+      </div>
     </header>
     <main class="content">
       <section class="section" id="invitation">
