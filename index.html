@@ -319,6 +319,9 @@
 
     /* Scroll Indicator Styles */
     .scroll-indicator {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-in-out, transform 1s ease-in-out;
       margin-top: 2rem;
       display: flex;
       justify-content: center;
@@ -422,7 +425,7 @@
         </div>
       </div>
     </header>
-    <main class="content">
+    <main id="main-content" class="content">
       <section class="section" id="invitation">
         <h2>With joyful hearts, we invite you to our wedding celebration</h2>
         <p class="quote">"Two souls with a single thought, two hearts that beat as one."</p>
@@ -439,7 +442,7 @@
         <div class="timeline">
           <div class="event left">
             <h3>Engagement Ceremony</h3>
-            <p>December 8, 2024 at 8:00 AM</p>
+            <p>December 8, 2024 at 10:00 AM</p>
             <p>Kinara Grand, Chanda Nagar, Hyderabad</p>
           </div>
           <div class="event right">
@@ -468,7 +471,7 @@
       <section class="section" id="engagement">
         <h2>Engagement Ceremony</h2>
         <p>Date: December 8th, 2024</p>
-        <p>Time: 8:00 AM</p>
+        <p>Time: 10:00 AM</p>
         <p>Venue: Kinara Grand, Chanda Nagar</p>
         <p>
           <a href="https://maps.app.goo.gl/27kaE7S6of1esJKc7" target="_blank" rel="noopener noreferrer" class="map-link">
@@ -505,6 +508,12 @@
   Your browser does not support the audio element.
 </audio>
 <script>
+  // Show the scroll indicator after 3 seconds
+  setTimeout(() => {
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    scrollIndicator.style.opacity = '1';
+    scrollIndicator.style.transform = 'translateY(0)';
+  }, 2000);
   // Parallax effect
   window.addEventListener('scroll', () => {
     const parallax = document.querySelector('.parallax__layer--back');
@@ -716,8 +725,13 @@
     isPlaying = !isPlaying;
   });
 
+  // Smooth scrolling to <main> when scroll indicator is clicked
+  document.querySelector('.scroll-indicator').addEventListener('click', () => {
+    document.getElementById('main-content').scrollIntoView({ behavior: 'smooth' });
+  });
   // Ensure the correct icon is displayed on page load
   audioControl.innerHTML = '<i class="fas fa-volume-mute"></i>';
+
 </script>
 </body>
 </html>
