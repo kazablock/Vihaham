@@ -394,29 +394,29 @@
       <div class="header-content">
         <h1>Vishnu & Haritha</h1>
         <p class="subtitle">A Celestial Union</p>
-      <!-- Infinity Symbol SVG with color-changing effect -->
-      <svg class="infinity-symbol" width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <!-- Define the glow filter -->
-          <filter id="glow">
-            <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
-            <feMerge>
-              <feMergeNode in="coloredBlur"/>
-              <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-          </filter>
-        </defs>
-        <!-- Infinity path with progressive drawing and color-changing effect -->
-        <path id="infinite-path" d="M20,50 C20,20 80,20 100,50 C120,80 180,80 180,50
+        <!-- Infinity Symbol SVG with color-changing effect -->
+        <svg class="infinity-symbol" width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <!-- Define the glow filter -->
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <!-- Infinity path with progressive drawing and color-changing effect -->
+          <path id="infinite-path" d="M20,50 C20,20 80,20 100,50 C120,80 180,80 180,50
     C180,20 120,20 100,50 C80,80 20,80 20,50"
-              stroke="#FFD700" stroke-width="4" fill="none" filter="url(#glow)"
-              stroke-dasharray="400" stroke-dashoffset="400">
-          <!-- Animate the progressive drawing -->
-          <animate attributeName="stroke-dashoffset" from="400" to="0" dur="5s" fill="freeze" />
-          <!-- Animate the stroke color -->
-          <animate attributeName="stroke" values="#FFD700;#C0C0C0;#E5E4E2;#AAA9AD;#FFD700" dur="10s" repeatCount="indefinite"/>
-        </path>
-      </svg>
+                stroke="#FFD700" stroke-width="4" fill="none" filter="url(#glow)"
+                stroke-dasharray="400" stroke-dashoffset="400">
+            <!-- Animate the progressive drawing -->
+            <animate attributeName="stroke-dashoffset" from="400" to="0" dur="5s" fill="freeze" />
+            <!-- Animate the stroke color -->
+            <animate attributeName="stroke" values="#FFD700;#C0C0C0;#E5E4E2;#AAA9AD;#FFD700" dur="10s" repeatCount="indefinite"/>
+          </path>
+        </svg>
         <div class="scroll-indicator">
           <i class="fas fa-chevron-down"></i>
         </div>
@@ -498,7 +498,7 @@
   </div>
 </div>
 <div class="audio-control" id="audioControl">
-  <i class="fas fa-volume-up"></i>
+  <i class="fas fa-volume-mute"></i>
 </div>
 <audio id="backgroundMusic" loop autoplay>
   <source src="music.mp3" type="audio/mpeg">
@@ -700,11 +700,10 @@
   // Background music control
   const audioControl = document.getElementById('audioControl');
   const backgroundMusic = document.getElementById('backgroundMusic');
-  let isPlaying = true;
+  let isPlaying = false;
 
   // Set initial volume to 50%
   backgroundMusic.volume = 0.5;
-  backgroundMusic.play();
 
   audioControl.addEventListener('click', () => {
     if (isPlaying) {
@@ -718,7 +717,7 @@
   });
 
   // Ensure the correct icon is displayed on page load
-  audioControl.innerHTML = '<i class="fas fa-volume-up"></i>';
+  audioControl.innerHTML = '<i class="fas fa-volume-mute"></i>';
 </script>
 </body>
 </html>
